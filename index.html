@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal</title>
+</head>
+
+<body>
+
+  <h1>Students Portal</h1>
+  <p>Fill in your details below.</p>
+
+  <br>
+
+  <label for="studentName">Full Name:</label>
+    <br />
+    <br>
+
+  <label for="studentID">ID Number:</label>
+  <br>
+    <br>
+
+  <label for="course">Course:</label><br><br>
+
+  <label for="yearLevel">Year Level:</label>
+  <br><br>
+
+  <button onclick="saveStudentData()">Submit</button>
+  <button onclick="welcomeStudent()">Login</button>
+
+  <br><br>
+
+  <p id="welcome-message"></p>
+
+  <script>
+    function saveStudentData() {
+      var name   = document.getElementById('studentName').value;
+      var id     = document.getElementById('studentID').value;
+      var course = document.getElementById('course').value;
+      var year   = document.getElementById('yearLevel').value;
+      var msg    = document.getElementById('welcome-message');
+
+      if (!name || !id || !course || !year) {
+        msg.innerText = 'Please fill in all fields.';
+        return;
+      }
+
+      msg.innerText = 'Saved! Name: ' + name + ' | ID: ' + id + ' | Course: ' + course + ' | Year: ' + year;
+    }
+
+    function welcomeStudent() {
+      var name = document.getElementById('studentName').value;
+      var msg  = document.getElementById('welcome-message');
+
+      if (!name) {
+        msg.innerText = 'Please enter your name to login.';
+        return;
+      }
+
+      msg.innerText = 'Welcome, ' + name + '! You are now logged in.';
+    }
+  </script>
+
+</body>
+
+</html>

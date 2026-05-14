@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #f4f6f9;
+}
+
+.sidebar {
+	width: 230px;
+	height: 100vh;
+	background: #1f2d3d;
+	padding: 20px;
+	color: white;
+}
+
+	.sidebar ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.sidebar li {
+		padding: 12px;
+		cursor: pointer;
+	}
+
+		.sidebar li:hover,
+		.sidebar li.active {
+			background: #34495e;
+		}
+
+.online {
+	color: lightgreen;
+}
+
+.header {
+	background: #28a745;
+	color: white;
+	padding: 15px 20px;
+}
+
+.dashboard-card {
+	background: white;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+	.dashboard-card h2 {
+		font-size: 40px;
+	}
+
+.calendar {
+	background: #28a745;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.calendar-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.calendar-body {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+}
+
+	.calendar-body div {
+		text-align: center;
+		padding: 10px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 5px;
+	}
